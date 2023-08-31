@@ -12,7 +12,7 @@ services :
     # On indique que le serveur redémarre en cas de crash.
     restart         : on-failure
     # On définit le path de build.
-    build           : requirements/mariadb/
+    build           : requirement/mariadb/
     # On donne les variables d'environnement à ajouter au conteneur.
     env_file :
       - .env
@@ -27,7 +27,7 @@ services :
     image           : wordpress
     container_name  : wordpress
     restart         : on-failure
-    build           : requirements/wordpress/
+    build           : requirement/wordpress/
     env_file :
       - .env
     volumes :
@@ -42,7 +42,7 @@ services :
     image           : nginx
     container_name  : nginx
     restart         : on-failure
-    build           : requirements/nginx/
+    build           : requirement/nginx/
     volumes :
       - WordPress:/var/www/wordpress
     networks :

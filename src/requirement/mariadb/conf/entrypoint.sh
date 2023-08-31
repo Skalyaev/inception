@@ -15,7 +15,7 @@ if [ ! -d var/lib/mysql/${DB_NAME} ]; then
 
 	# On s'assure que le serveur MariaDB est bien lancé.
 	while ! mysqladmin ping -h localhost --silent; do
-    	sleep 1
+    	        sleep 1
 	done
 
 	# On supprime les utilisateurs sans nom de notre serveur.
