@@ -40,4 +40,4 @@ if [ ! -f /var/www/wordpress/wp-config.php ]; then
 fi
 
 # On lance la commande spécifiée en 'CMD' de notre Dockerfile.
-exec "$@"
+exec $@
