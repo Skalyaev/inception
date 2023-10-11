@@ -34,7 +34,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY '${DB_ROOT_PASSWD}';
 EOF
 
 	# On stop le serveur MariaDB.
-	mysqladmin -p12345 shutdown
+	mysqladmin -p${DB_ROOT_PASSWD} shutdown
 fi
 
 # On lance la commande spécifiée en 'CMD' de notre Dockerfile.
