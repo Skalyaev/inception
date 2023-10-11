@@ -38,4 +38,4 @@ EOF
 fi
 
 # On lance la commande spécifiée en 'CMD' de notre Dockerfile.
-exec "$@"
+exec $@
