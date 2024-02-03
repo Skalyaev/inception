@@ -2,6 +2,8 @@ SRCS		= src
 COMPOSER	= docker-compose.yml
 
 all		:
+		mkdir -p ~/data/WordPress
+		mkdir -p ~/data/DB
 		docker-compose -f $(SRCS)/$(COMPOSER) build
 		docker-compose -f $(SRCS)/$(COMPOSER) up
 
@@ -13,11 +15,11 @@ clean		:
 
 fclean		:
 		docker system prune -fa
+		docker volume rm src_WP
+		docker volume rm src_DB
+		rm -rf ~/data/WordPress
+		rm -rf ~/data/DB
 
 re		: fclean all
 
-rmv		:
-		rm -rf /home/anguinau/data/WordPress/*
-		rm -rf /home/anguinau/data/DB/*
-
-.PHONY		: all stop clean fclean re rmv
+.PHONY		: all stop clean fclean re
