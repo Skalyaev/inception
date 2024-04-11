@@ -17,8 +17,7 @@ fclean:
 	docker system prune -fa
 	docker volume rm src_WP
 	docker volume rm src_DB
-	rm -rf ~/data/WordPress
-	rm -rf ~/data/DB
+	echo "Done, you also might want to remove ~/data"
 
 re: fclean all
 
