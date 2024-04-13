@@ -1,6 +1,6 @@
 # <p align="center">inception</p>
 > *Ce projet vise à élargir vos connaissances en administration système en utilisant Docker.*
-> 
+>
 > *Vous allez virtualiser plusieurs images Docker, en les créant dans votre nouvelle machine virtuelle personnelle.*
 
 ## Checklist
@@ -10,7 +10,7 @@
 - [x] PHP-fpm setup
 - [x] MariaDB setup
 
-## Installer
+## Install
 ```bash
 sudo apt update -y
 sudo apt install -y make
@@ -31,13 +31,14 @@ cd $name && sudo make
 # ensuite -> https://anguinau.42.fr/
 ```
 
-## Désinstaller
+## Uninstall
 ```bash
 name=inception
 cd $name && sudo make fclean
-rm -r $name
+rm -rf $name
 ```
 ```bash
 sudo vim /etc/hosts
 # enlève "127.0.0.1 anguinau.42.fr"
 ```
+
