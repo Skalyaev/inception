@@ -10,7 +10,7 @@
 - [x] PHP-fpm setup
 - [x] MariaDB setup
 
-## Install
+## Usage
 ```bash
 sudo apt update -y
 sudo apt install -y make
@@ -22,23 +22,8 @@ sudo vim /etc/hosts
 # ajoute "127.0.0.1 anguinau.42.fr"
 ```
 ```bash
-link=Skalyaeve/inception
-name=inception
-
-git clone https://github.com/$link.git $name
-cd $name && sudo make
+git clone https://github.com/Skalyaeve/inception.git
+cd inception && sudo make
 # ca va prendre du temps
 # ensuite -> https://anguinau.42.fr/
 ```
-
-## Uninstall
-```bash
-name=inception
-cd $name && sudo make fclean
-rm -rf $name
-```
-```bash
-sudo vim /etc/hosts
-# enlève "127.0.0.1 anguinau.42.fr"
-```
-
